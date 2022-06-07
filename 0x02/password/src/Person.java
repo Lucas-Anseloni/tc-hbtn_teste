@@ -9,13 +9,13 @@ public class Person {
     }
 
     public boolean checkUser(){
-        return !username.contains("!@#$%&*") && username.length() >=8;
+        return !username.contains("!@#$%&*") && username.length() <=8;
     }
 
     public boolean checkPassword(){
         if (!this.password.matches(".*[A-Z].*")) return false;
         if (!this.password.matches(".*[0-9].*")) return false;
-        if (!this.password.matches(".*[-+_!@#$%&.,?].*")) return false;
+        if (!this.password.matches(".*[-+_!@#$%^&.,?].*")) return false;
         if (this.password.length() < 8) return false;
         return true;
     }
