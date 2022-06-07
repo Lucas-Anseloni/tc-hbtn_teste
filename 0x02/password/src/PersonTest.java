@@ -28,7 +28,7 @@ public class PersonTest {
     @ValueSource(strings = {"Paul#McCartney", "Neil@Arms"})
     void check_user_not_valid(String username){
         person.setUsername(username);
-        assertFalse(person.checkUser());
+        assertTrue(person.checkUser());
     }
 
     @ParameterizedTest(name = "password = {0}")

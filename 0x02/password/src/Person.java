@@ -9,7 +9,7 @@ public class Person {
     }
 
     public boolean checkUser(){
-        return !username.contains("!@#$%&*") && username.length() <=8;
+        return !this.username.contains("!@#$%&*^") && this.username.length() >=8;
     }
 
     public boolean checkPassword(){
